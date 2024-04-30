@@ -1,0 +1,428 @@
+/* General styles */
+body {
+    font-family: 'Roboto', sans-serif;  
+    margin: 0;
+    padding: 0;
+    background-color: #f8f8f8;
+    color: #0a0505; 
+}
+
+/* Header */
+.header {
+    background-color: #020007;  
+    color: #ffffff;  
+    padding: 20px 0;  
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);  
+    position: fixed;  
+    width: 100%;  
+    z-index: 1000;  
+    transition: background-color 0.3s;  
+}
+
+/* Navigation */
+.nav {
+    display: flex;  
+    justify-content: space-between; 
+    align-items: center;  
+    max-width: 1200px;  
+    margin: 0 auto; 
+}
+
+/* Logo */
+.logo {
+    font-family: 'Roboto', sans-serif;
+    font-size: 28px; 
+    font-weight: bold; 
+}
+
+/* Navigation Links */
+.nav-links {
+    list-style: none; 
+    margin: 0; 
+    padding: 0; 
+}
+
+.nav-links li {
+    display: inline; 
+}
+
+.nav-links li:not(:last-child) {
+    margin-right: 20px; 
+}
+
+.nav-links li a {
+    text-decoration: none; 
+    color: #ffffff;
+    font-family: 'Montserrat', sans-serif; 
+    font-size: 16px;
+    transition: color 0.3s;
+}
+
+.nav-links li a:hover {
+    color: #cccccc; 
+}
+
+
+
+
+
+/* CSS for Home Section */
+.home-section {
+    background-image: url('img/home.jpg');
+    background-size: cover;
+    background-position: center; 
+    background-repeat: no-repeat; 
+    background-attachment: fixed; 
+    color: #f7f9f9;
+    padding: 100px 0; 
+    text-align: center; 
+}
+
+
+.home-content {
+    max-width: 800px; 
+    margin: 0 auto; 
+}
+
+.home-title {
+    font-size: 3.5rem; 
+    margin-bottom: 20px; 
+    color:#fdfcfc;
+}
+
+.home-subtitle {
+    font-size: 2.6rem; 
+    margin-bottom: 30px; 
+    color:#020007;
+}
+.home-description{
+      font-size: 1.2rem;   
+      color: #fafafc;               
+}
+
+.animated-text {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 1s ease forwards;
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+
+/* Featured Job Section */
+.featured-jobs {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    color: #121111;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 1s forwards;
+    animation-delay: 0.5s;
+}
+
+.job-listing {
+    width: 300px;
+    margin: 20px;
+    padding: 20px;
+    background-color: rgba(235, 229, 229, 0);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.job-listing:hover {
+    transform: translateY(-5px);
+}
+
+.job-image {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.job-details {
+    font-size: 1rem;
+    line-height: 1.5;
+    margin-top: 10px;
+    color: #fafafc;
+}
+
+/* Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.apply-now-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    border: 2px solid #545252;
+    border-radius: 5px;
+    background-color: #a1a19c;
+    color: #ffffff;
+    text-decoration: none;
+    transition: background-color 0.3s, border-color 0.3s, color 0.3s;
+}
+
+.apply-now-btn:hover {
+    background-color: #545252;
+    border-color: #545252;
+    color: #ffffff;
+}
+
+
+/* About section styles */
+.about-section {
+    background-image: url('img/abt.jpg');
+    background-size: cover;
+    background-position: center;
+    color: #ffffff;
+    padding: 100px 0;
+    text-align: center;
+}
+
+.about-content {
+    max-width: 800px;
+    margin: 0 auto;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 1s forwards;
+    animation-delay: 0.5s;
+}
+
+.about-title {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    background-color: rgba(54, 52, 52, 0.459);
+    padding: 10px 20px;
+    border-radius: 10px;
+    display: inline-block;
+    animation: fadeIn 1s forwards;
+    animation-delay: 0.5s;
+    color: #fafafc;
+}
+
+.topics {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-top: 50px;
+}
+
+.topic {
+    width: 300px;
+    margin-bottom: 30px;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.topic:hover {
+    transform: translateY(-5px);
+}
+
+.topic-image {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.topic-title {
+    font-size: 1.5rem;
+    margin-top: 10px;
+}
+
+.topic-description {
+    font-size: 1rem;
+    line-height: 1.5;
+    margin-top: 10px;
+}
+
+/* Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* Testimonial styles */
+.testimonial {
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 2rem;
+}
+
+.testimonial p {
+    font-style: italic;
+    margin-bottom: 1rem;
+}
+
+.testimonial-image {
+    max-width: 100px;
+    height: auto;
+    border-radius: 50%;
+    margin-bottom: 1rem;
+}
+
+/* Contact us style*/
+.contact-section {
+    background-image: url('img/contact.jpg');
+    background-size: cover;
+    background-position: center;
+    color: #f7f3f3;
+    padding: 100px 0;
+    text-align: center;
+}
+
+.contact-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    background-color: rgba(54, 52, 52, 0.459);
+    padding: 10px 20px;
+    border-radius: 5px;
+    display: inline-block;
+    animation: fadeIn 1s forwards;
+    animation-delay: 0.5s;
+}
+
+.contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 30px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    animation: fadeInUp 1s forwards;
+    animation-delay: 0.5s;
+}
+
+.form-group {
+    margin-bottom: 5px;
+}
+
+label {
+    display: block;
+    font-size: 1.2rem;
+}
+
+input[type="text"],
+input[type="email"],
+textarea,
+select,
+input[type="file"] {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #ffffff;
+}
+
+button[type="submit"] {
+    background-color: #a9aaa9;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+    background-color: #656464;
+}
+
+/* Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+
+/* Additional styles */
+
+p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+}
+
+.section {
+    text-align: center;
+}
+
+.content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1rem 0;
+}
+
+/* Add your custom styles for the map container if needed */
+/* #map {
+    height: 400px; 
+    width: 100%; 
+} */
